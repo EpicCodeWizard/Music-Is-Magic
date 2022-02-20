@@ -22,4 +22,4 @@ Shivani learnt how to make `JavaScript` instruments. Utsav learnt how to use `Co
 	• Have More Rewards For Coins
 
 ###### ***`GoDaddy` Domain: [http://music-is-magic.co/](http://music-is-magic.co/)***
-###### ***`domain.com` Domain: [http://magic-is-music.tech/](http://magic-is-music.tech/)***
+###### ***`domain.com` Domain: [http://music-is-magic.tech/](http://music-is-magic.tech/)***
