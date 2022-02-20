@@ -1,0 +1,23 @@
+/**
+ * Returns TwiML that prompts the users to make a choice.
+ * If the user enters something it will trigger the handle-user-input Function and otherwise go in a loop.
+ */
+exports.handler = function (context, event, callback) {
+  const twiml = new Twilio.twiml.VoiceResponse();
+  const gather = twiml.gather({
+    numDigits: 1,
+    action: 'handle-user-input',
+    hints: 'information, sorcerer, partytime, instruments, concert ',
+    input: 'speech dtmf',
+  });
+  gather.say('Welcome to Music Is Magic. We are glad to onboard you on a journey of Harmonious and Melodious Music that you crave or can create. All creators are known as wizards here. Please be comfortable to use our services and have a great experience with us.');
+  gather.say('Press 1 or say Information if you want to learn about the mystical reality at Music is Magic');
+  gather.say('Press 2 or say Sorcerer to get connected to one of our representatives at Council of Music is Magic');
+  gather.say('Press 3 or say Partytime to connect on conference call with other music enthusiasts and join forces to complete the musical quest together.');
+  gather.say(
+    'Press 4 or say Instruments to receive a text message with names of all the wizarding-wands that is instruments you can use to jam up the sessions and awstruck your community.');
+  gather.say('Press 5 or say Concert to recieve the link for the video conference that pumps adrenaline by joining you in the Master Dome of Live Concert.');
+  twiml.say(`Sorry we are unable to understand your requirement. Please conduct the accpetable action again.`);
+  twiml.redirect();
+  callback(null, twiml);
+};
